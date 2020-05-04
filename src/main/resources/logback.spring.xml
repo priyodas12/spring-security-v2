@@ -1,0 +1,5 @@
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"></include>
+    <logger name="io.priyoworkspace.springsecurityv2" level="DEBUG"/>
+    <logger name="org.springframework" level="DEBUG"/>
+</configuration>
