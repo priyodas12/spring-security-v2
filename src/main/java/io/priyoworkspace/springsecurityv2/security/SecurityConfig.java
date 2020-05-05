@@ -19,7 +19,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     protected UserDetailsService userDetailsService() {
-        UserDetails userDetails= User.builder().username("priyo").password("####123").roles("dev").build();
+        UserDetails userDetails= User
+                .builder()
+                .username("priyo") //authentication details
+                .password("####123")
+                .roles("dev") //authorization details
+                .build();
 
         return new InMemoryUserDetailsManager(userDetails);
     }
