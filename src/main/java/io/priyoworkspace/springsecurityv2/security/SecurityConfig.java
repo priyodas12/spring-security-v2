@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //Basic auth:browser based authentication;no way to logout
         http.
                 authorizeRequests()
-                .antMatchers("/","index","/css/*","/js/*")
+                .antMatchers("/","index","/css/*","/js/*")//whitelisting url
                 .permitAll()
                 .anyRequest()
                 .authenticated()
