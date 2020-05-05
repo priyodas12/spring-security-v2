@@ -14,6 +14,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //any request coming through any controller end point to be authenticated.
         //Basic auth:browser based authentication;no way to logout
-        http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+        http.
+                authorizeRequests()
+                .antMatchers("/","index","/css/*","/js/*")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .httpBasic();
     }
 }
