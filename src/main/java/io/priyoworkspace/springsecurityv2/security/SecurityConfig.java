@@ -13,7 +13,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //any request coming through any controller end point to be authenticated.
-        //browser based authentication
+        //Basic auth:browser based authentication;no way to logout
         http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
     }
 }
